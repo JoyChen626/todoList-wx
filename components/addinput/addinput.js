@@ -50,6 +50,7 @@ Component({
             icon: 'none',
             duration: 3000
           });
+          _this.setData({addValue:''})
           _this.triggerEvent('add', true);
         },
         fail: err => {

@@ -83,6 +83,7 @@ Page({
       userId: this.data.userId
     }).orderBy('create_at', 'desc').get({
       success: res => {
+        console.log(res)
         var list1 = [];
         var list2 = [];
         var list3 = [];

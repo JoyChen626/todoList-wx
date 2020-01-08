@@ -130,6 +130,7 @@ Page({
               ress.userName = this.data.userName;
               ress.userId = userId;
               ress.userPhoto = this.data.avatarUrl;
+              ress.color = "#000000";
               wx.setStorageSync('userInfo', ress);
               wx.navigateTo({
                 url: '../index/index',
@@ -155,6 +156,7 @@ Page({
           res.userName = result.data[0].userName;
           res.userId = result.data[0].userId;
           res.userPhoto = result.data[0].userPhoto;
+          res.color = result.data[0].color;
           wx.setStorageSync('userInfo', res);
           wx.navigateTo({
             url: '../index/index',
@@ -191,6 +193,7 @@ Page({
                     res.userName = result.data[0].userName;
                     res.userId = result.data[0].userId;
                     res.userPhoto = result.data[0].userPhoto;
+                    res.color = result.data[0].color;
                     wx.setStorageSync('userInfo', res);
                     wx.navigateTo({
                       url: '../index/index',
@@ -213,6 +216,7 @@ Page({
                         ress.userName = res2.userInfo.nickName;
                         ress.userId = _this.setId();
                         ress.userPhoto = res2.userInfo.avatarUrl;
+                        ress.color = '#000000';
                         wx.setStorageSync('userInfo', ress);
                         wx.navigateTo({
                           url: '../index/index',
