@@ -1,0 +1,39 @@
+<!--components/list/list.wxml-->
+<view class="list-box">
+  <view class="list list{{index}}" wx:for="{{thingList}}" wx:for-item="item" wx:key="index">
+    <scroll-view class="scroll-box" scroll-x="true" scroll-left="{{item.scrollLeft}}" style="width:{{windowWidth}}px" id="{{item._id}}" bindscroll="scroll">
+      <view style="width:{{btnWidth*(item.status == 0?2:1) + windowWidth}}px;display:flex;">
+        <view class="scroll-left" style="width:{{windowWidth}}px" id="{{item._id}}" bindtap="showDetail">
+          <view class="thing">
+            <view class="ellipsis">{{item.thingName}}</view>
+          </view>
+          <view class="time">
+            <view>{{item.status == 0?item.create_at:item.status == 1?item.todo_at:item.setout_at}}</view>
+          </view>
+        </view>
+        <view class="scroll-right">
+          <view class="btn done" wx:if="{{item.status == 0}}" id="{{item._id}}" data-type="1" bindtap="changeStatus">完成</view>
+          <view class="btn remove" wx:if="{{item.status == 0 || item.status == 1}}" id="{{item._id}}" data-type="2" bindtap="changeStatus">移除</view>
+          <view class="btn delete" wx:if="{{item.status == 2}}" id="{{item._id}}" bindtap="deleteData">删除</view>
+        </view>
+      </view>
+    </scroll-view>
+    <view class="detail-box" style="height:{{item.open?item.height:0}}px;">
+      <view class="box">
+        <view class="top">
+          <text>状态：{{item.status == 0 ? '待完成' : item.status == 1 ? '已完成' : '已移除'}}</text>
+          <text>时间：{{item.status == 0?item.create_at:item.status == 1?item.todo_at:item.setout_at}}</text>
+        </view>
+        <view class="center">
+          <text>{{item.thingName}}</text>
+        </view>
+        <view class="bottom">
+          <button class="done" wx:if="{{item.status == 0}}" id="{{item._id}}" data-type="1" bindtap="changeStatus">完成</button>
+          <button class="remove" wx:if="{{item.status == 0 || item.status == 1}}" id="{{item._id}}" data-type="2" bindtap="changeStatus">移除</button>
+          <button class="delete" wx:if="{{item.status == 2}}" id="{{item._id}}" bindtap="deleteData">删除</button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{thingList.length==0}}" class="no_data">暂无数据</view>
+</view>

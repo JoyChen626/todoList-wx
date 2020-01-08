@@ -1,0 +1,17 @@
+<!--components/leftNav/leftnav.wxml-->
+<view class="leftnav" style="width:{{show?'200':'0'}}rpx" bindtouchstart="touchStart" bindtouchend="touchEnd">
+  <view class="img-box" bindtap="doUpload">
+    <image wx:hidden="{{avatarUrl}}" src="{{avatarUrl}}"></image>
+  </view>
+  <view class="name">
+    <text>{{userName}}</text>
+  </view>
+  <view class="btn-box">
+    <view class="item" bindtap="showColorPicker" style="background:{{theme}}">
+      <text>切换主题</text>
+    </view>
+    <view class="item" style="background:{{theme}}" bindtap="login_out">
+      <text>退出登录</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,119 @@
+/* components/list/list.wxss */
+@import '../../style/common';
+
+.list-box {
+  background: #fff;
+}
+
+.list {
+  border-bottom: 1px solid #eee;
+}
+
+.list:nth-child(odd){
+  background: rgba(0,0,0,.2);
+}
+
+.scroll-left {
+  display: flex;
+}
+
+.thing, .time {
+  line-height: 80rpx;
+  height: 80rpx;
+  padding: 0 10rpx;
+}
+
+.thing {
+  flex: 1;
+  font-size: 28rpx;
+  overflow: hidden;
+}
+
+.time {
+  width: 240rpx;
+  font-size: 24rpx;
+  text-align: right;
+  color: #999;
+}
+
+.scroll-right {
+  max-width: 360rpx;
+  display: flex;
+  flex: 1;
+}
+
+.btn {
+  width: 120rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+}
+
+.btn.done {
+  background: #409eff;
+}
+
+.btn.remove {
+  background: #e6a23c;
+}
+
+.btn.delete {
+  background: #f56c6c;
+}
+
+.detail-box {
+  overflow: hidden;
+  transition: .5s;
+}
+.detail-box .box{
+  padding: 10rpx;
+}
+
+.top {
+  display: flex;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.top text {
+  flex: 1;
+}
+
+.center {
+  padding: 20rpx 0;
+  line-height: 44rpx;
+  font-size: 28rpx;
+}
+.bottom{
+  display: flex;
+}
+.bottom button{
+  flex: 1;
+  margin: 0 20rpx;
+  font-size: 28rpx;
+  min-height: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0;
+  color: #ffffff;
+}
+.bottom button.done {
+  background: #409eff;
+}
+
+.bottom button.remove {
+  background: #e6a23c;
+}
+
+.bottom button.delete {
+  background: #f56c6c;
+}
+.no_data{
+  text-align: center;
+  font-size: 28rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+}

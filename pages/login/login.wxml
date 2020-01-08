@@ -1,0 +1,29 @@
+<!--miniprogram/pages/login/login.wxml-->
+<view class="page">
+  <view class="setCenter">
+    <view class="logo-box">
+      <image class="logo" src=""></image>
+    </view>
+    <view class="input-box">
+      <text>账号：</text>
+      <input data-type="username" type="text" bindinput="getInputVal" value="{{userName}}"></input>
+    </view>
+    <view class="input-box">
+      <text>密码：</text>
+      <input data-type="password" type="password" bindinput="getInputVal" value="{{password}}"></input>
+    </view>
+    <view class="btn-box">
+      <button type="primary" open-type="getUserInfo" data-type="login" bindgetuserinfo="getUserInfo">{{loginType==0?'登录':'注册'}}</button>
+    </view>
+    <view class="other-box clearfix">
+      <text class="left">{{loginType==0?'未':'已'}}有账号？</text>
+      <text class="right" bindtap="changeType">去{{loginType==0?'注册':'登录'}}</text>
+    </view>
+    <view class="three-box">
+      <view class="icon-box">
+        <button open-type="getUserInfo" data-type="three" bindgetuserinfo="getUserInfo"></button>
+        <image class="icon" src=""></image>
+      </view>
+    </view>
+  </view>
+</view>

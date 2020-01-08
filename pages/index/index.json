@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "index-header":"../../components/header/header",
+    "index-add": "../../components/addinput/addinput",
+    "index-list": "../../components/list/list",
+    "index-leftnav": "../../components/leftnav/leftnav",
+    "index-colorpicker":"../../components/colorpicker/colorpicker"
+  }
+}

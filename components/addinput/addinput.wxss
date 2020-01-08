@@ -1,0 +1,37 @@
+/* components/addInput/addinput.wxss */
+@import '../../style/common';
+.add-box{
+  padding: 10rpx;
+  display: flex;
+}
+.icon-photo{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(255,255,255,.3);
+  margin-right: 10rpx;
+}
+.icon-photo image{
+  width: 100%;
+  height: 100%;
+}
+input{
+  flex: 1;
+  border: 2rpx solid #eeeeee;
+  height: 36rpx; 
+  line-height: 36rpx;
+  min-height: 36rpx; 
+  margin-right: 20rpx;
+  border-radius: 28rpx;
+  padding: 10rpx 30rpx;
+  font-size: 28rpx;
+  color: #666666;
+  margin-top: 10rpx;
+  background: #ffffff;
+}
+button{
+  margin-top: 10rpx;
+  background: #ffffff;
+  color: #999999;
+}

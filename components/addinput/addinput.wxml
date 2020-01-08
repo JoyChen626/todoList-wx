@@ -1,0 +1,8 @@
+<!--components/addInput/addinput.wxml-->
+<view class="add-box" style="background:{{theme}}">
+  <view class="icon-photo" bindtap="photoclick">
+    <image src="{{avatarUrl}}" wx:hidden="{{avatarUrl}}"></image>
+  </view>
+  <input placeholder="请输入" bindinput="changeValue"></input>
+  <button bindtap="creatThing">创建</button>
+</view>

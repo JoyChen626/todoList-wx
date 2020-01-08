@@ -1,0 +1,60 @@
+/* components/mypicker/mypicker.wxss */
+
+.picker {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  z-index: 999;
+  border-radius: 16rpx 16rpx 0 0;
+  transition: .5s;
+}
+.close-box{
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 30rpx 0 10rpx 680rpx;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.picker-item {
+  font-size: 0;
+  line-height: 60rpx;
+  height: 60rpx;
+  border-bottom: 2rpx solid #eee;
+}
+.currentColor0{
+  background: rgba(5, 4, 4, 0.2);
+}
+.currentColor1{
+  background: rgba(108, 182, 252, 0.2);
+}
+.currentColor2{
+  background: rgba(112, 250, 130, 0.2);
+}
+.currentColor3{
+  background: rgba(121, 122, 124, 0.2);
+}
+.currentColor4{
+  background: rgba(250, 203, 73, 0.2);
+}
+.currentColor5{
+  background: rgba(252, 108, 108, 0.2);
+}
+.picker-item:last-child {
+  margin-bottom: 30rpx;
+}
+
+.picker-item text {
+  font-size: 28rpx;
+}
+
+.picker-item text:nth-child(1) {
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: top;
+  margin: 10rpx 10rpx 0 320rpx;
+}

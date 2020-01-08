@@ -1,0 +1,13 @@
+<!--components/header/header.wxml-->
+<view class="header">
+  <view class="header-box" style="background: {{theme}}">
+    <view class="photo-box">
+      <image class="photo" src=""></image>
+    </view>
+    <view class="title-box">
+      <text>{{title}}</text>
+    </view>
+    <view class="icon-box"></view>
+  </view>
+</view>
+<view class="full"></view>

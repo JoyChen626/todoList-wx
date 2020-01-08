@@ -1,0 +1,10 @@
+<!--components/mypicker/mypicker.wxml-->
+<view class="picker" style="height:{{(showColorPicker&&ipx)?570:(showColorPicker&&!ipx)?502:0}}rpx">
+  <view class="close-box" bindtap="closeColorPicker">
+    <icon type="cancel" size="60rpx" color="#999999" />
+  </view>
+  <view class="picker-item {{currentColor==item.color?'currentColor'+index:''}}" wx:for="{{themeList}}" wx:for-item="item" wx:key="index" data-color="{{item.color}}" bindtap="changeTheme">
+    <text style="background:{{item.color}}"></text>
+    <text>{{item.color}}</text>
+  </view>
+</view>

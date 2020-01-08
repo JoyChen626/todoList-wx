@@ -1,0 +1,75 @@
+/* miniprogram/pages/login/login.wxss */
+.logo-box{
+  width: 300rpx;
+  height: 300rpx;
+  overflow: hidden;
+  margin: 0 auto 40rpx auto;
+  background: #eeeeee;
+}
+.logo-box .logo{
+  width: 100%;
+}
+.input-box{
+  width: 500rpx;
+  height: 80rpx;
+  overflow: hidden;
+  margin: 10rpx auto;
+  display: flex;
+}
+.input-box text{
+  margin-right: 8rpx;
+  font-size: 32rpx;
+  line-height: 80rpx;
+}
+.input-box input{
+  flex: 1;
+  font-size: 32rpx;
+  line-height: 60rpx;
+  margin: 7rpx 0;
+  height: 44rpx;
+  padding: 8rpx 30rpx;
+  border:2rpx solid #eeeeee;
+  border-radius: 30rpx;
+}
+.btn-box{
+  display: flex;
+  margin-top: 40rpx; 
+  margin-bottom: 10rpx;
+}
+.btn-box button{
+  flex: 1;
+}
+.other-box text{
+  font-size: 28rpx;
+  color: #999999;
+}
+.other-box text:nth-child(2){
+  text-decoration: underline;
+}
+.three-box{
+  margin-top: 40rpx;
+  font-size: 0;
+  text-align: center;
+}
+
+.icon-box{
+  display: inline-block;
+  margin: 0 20rpx;
+  width: 160rpx;
+  height: 160rpx;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #eeeeee;
+    position: relative;
+}
+.icon-box button{
+  position: absolute;
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
+.icon-box .icon{
+  width: 100%;
+}

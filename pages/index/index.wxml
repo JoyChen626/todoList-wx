@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="page">
+  <!-- <index-header title="首页" theme="{{theme}}"></index-header> -->
+  <view>
+    <index-add bindadd="addThing" bindphotoclick="show_left" theme="{{theme}}" avatarUrl="{{avatarUrl}}"></index-add>
+    <view class="part">
+      <view class="list-title" style="border-left: 8rpx solid {{theme}}">待做事项：</view>
+      <index-list lists="{{lists1}}" bindchange="changeThing"></index-list>
+    </view>
+    <view class="part">
+      <view class="list-title" style="border-left: 8rpx solid {{theme}}">已完成事项：</view>
+      <index-list lists="{{lists2}}" bindchange="changeThing"></index-list>
+    </view>
+    <view class="part">
+      <view class="list-title" style="border-left: 8rpx solid {{theme}}">已移除事项：</view>
+      <index-list lists="{{lists3}}" bindremove="removeThing"></index-list>
+    </view>
+  </view>
+  <view style="height:{{ipx?68:0}}rpx"></view>
+</view>
+<index-leftnav show="{{show_leftnav}}" bindshow_color="show_color_picker" theme="{{theme}}" avatarUrl="{{avatarUrl}}" userName="{{userName}}" bindchange_photo="changePhoto"></index-leftnav>
+<index-colorpicker showColorPicker="{{showColorPicker}}" themeList="{{themeList}}" bindchange_theme="changeTheme" currentColor="{{theme}}"></index-colorpicker>
